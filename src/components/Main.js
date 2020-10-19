@@ -81,8 +81,10 @@ export default class Main extends Component {
 
         return (
             <main className="app__main">
-                <SourcesBar sources={this.state.sources} clickHandler={this.sourceClick}/>
-                <SearchBar queryHandler={this.filterClick}/>
+                <div className="app_search-block">
+                    <SearchBar queryHandler={this.filterClick}/>
+                    <SourcesBar sources={this.state.sources} clickHandler={this.sourceClick}/>
+                </div>
                 <ContentWrapper articles={this.state.content} />
                 <ErrorBlock visible={this.state.newsDisplayed < 1}/>
                 <MoreButton clickHandler={this.loadMoreClick}
