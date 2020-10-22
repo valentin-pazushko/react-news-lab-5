@@ -47,6 +47,10 @@ export default class Main extends Component {
             this.setState({query: `everything?q=${newQuery}`}, () =>{
                 this.performRequest();
             });
+        } else {
+            this.setState({query: `top-headlines?country=ru`}, () =>{
+                this.performRequest();
+            });
         }
     }
 
